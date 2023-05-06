@@ -1,9 +1,12 @@
 pipeline {
     agent { 
-        node {
+        /*node {
             label 'docker-agent-python'
             }
-      }
+      } */
+        docker{
+        image 'devopsjourney1/myjenkinsagents:python'
+        }
     triggers {
         pollSCM '* * * * *'
     }
